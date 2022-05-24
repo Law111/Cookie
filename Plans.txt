@@ -1,0 +1,11 @@
+TODO List
+
+Reqs
+- Block Class
+T,Z,O,L,I
+- Method of rotation
+- Board Class (10x20) -- will extend for border
+- Queue for blocks
+- Timer (delay)
+- Border similar to chessboard, with negative values
+- Movement of blocks within board
