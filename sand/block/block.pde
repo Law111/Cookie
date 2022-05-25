@@ -3,22 +3,28 @@
   int y = 50;
 
   void setup() {
-    size(600, 600);
+    size(300, 600);
+    int x1 = 0;
+    int y1 = 0;
+    while(x1<300){
+      line(x1,0,x1,600);
+      x1+=30;
+    }
   }
 
   void draw() {
     background(0);
-    ellipse(x, y, 30, 30); 
+    square(x, y, 30); 
     y+=0.01;
   }
   void keyPressed() {
     if (key == CODED) {
       } if (keyCode == DOWN) {
-        y += 5;
+        y += 30;
       } else if (keyCode == LEFT) {
-        x -= 5;
+        x -= 30;
       } else if (keyCode == RIGHT) {
-        x += 5; 
+        x += 30; 
       }
   }
 
