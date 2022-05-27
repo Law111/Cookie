@@ -66,3 +66,10 @@ Lawrence Joa :: Allowed blocks to move
 Justin Mohabir :: Updated and added devlog
 Lior Polischouk :: Added gridlines
 ==============================================================
+
+2022-05-26
+--------------------------------------------------------------
+Lawrence Joa :: Added two dimensional array
+Justin Mohabir :: Added traversal with two dimensional array
+Lior Polischouk :: Added proposal
+==============================================================
