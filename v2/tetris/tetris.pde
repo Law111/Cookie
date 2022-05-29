@@ -2,6 +2,7 @@ int x = 5;
   int y = 5;
   public board n;
   block b;
+  int timer;
 
   void setup() {
     size(301, 601);
@@ -15,6 +16,7 @@ int x = 5;
   void draw() {
     background(0);
     n.draw();
+    autoFall();
     float x1 = 0;
     float y1 = 0;
     while(x1<=300){
@@ -27,13 +29,20 @@ int x = 5;
       line(0,y1,300,y1);
       y1+=30;
     }
-    // delay(500);
+    timer++;
+  }
+  void autoFall(){
+    if(timer >= 60) {
+      b.moveDown();
+      timer = 0;
+    }
   }
   
   void keyPressed() {
     if (key == CODED) {
       } if (keyCode == DOWN) {
         b.moveDown();
+        timer = 0;
       } else if (keyCode == LEFT) {;
         b.moveLeft();
       } else if (keyCode == RIGHT) {

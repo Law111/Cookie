@@ -12,7 +12,7 @@ class block{
   }
   
   void moveRight(){
-    if(n.board[r][c+1]!=-1){
+    if(n.board[r][c+1]==0){
       n.board[r][c] = 0;
       c++;
       n.board[r][c] = 1;
@@ -20,7 +20,7 @@ class block{
   }
   
   void moveLeft(){
-    if(n.board[r][c-1]!=-1){
+    if(n.board[r][c-1]==0){
       n.board[r][c] = 0;
       c--;
       n.board[r][c] = 1;
