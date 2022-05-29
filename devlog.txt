@@ -73,3 +73,10 @@ Lawrence Joa :: Added two dimensional array
 Justin Mohabir :: Added traversal with two dimensional array
 Lior Polischouk :: Added proposal
 ==============================================================
+
+2022-05-27
+--------------------------------------------------------------
+Lawrence Joa :: Added timer
+Justin Mohabir :: Added row removal when rows are full
+Lior Polischouk :: Added spawning blocks when the block reaches the bottom 
+==============================================================
