@@ -1,13 +1,15 @@
-
-  int x = 5;
+int x = 5;
   int y = 5;
-  board n;
+  public board n;
+  block b;
 
   void setup() {
     size(301, 601);
     n = new board();
-    n.setup();
-    n.board[x][y] = 1;
+    b = new block();
+    n.setup(20,10);
+    // 20 x 10 board
+    b.setup(x,y);
   }
 
   void draw() {
@@ -25,22 +27,17 @@
       line(0,y1,300,y1);
       y1+=30;
     }
+    // delay(500);
   }
   
   void keyPressed() {
     if (key == CODED) {
       } if (keyCode == DOWN) {
-        n.board[x][y] = 0;
-        y++;
-        n.board[x][y] = 1;
+        b.moveDown();
       } else if (keyCode == LEFT) {;
-        n.board[x][y] = 0;
-        x--;
-        n.board[x-1][y] = 1;
+        b.moveLeft();
       } else if (keyCode == RIGHT) {
-        n.board[x][y] = 0;
-        x++;
-        n.board[x][y] = 1;
+        b.moveRight();
       }
   }
 
