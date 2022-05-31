@@ -9,32 +9,33 @@ class block{
     cInit=c1;
     r=r1;
     c=c1;
-    if (Math.random()*1 < 1) {
+    double rand = Math.random()*7;
+    if (rand < 1) {
       blockI I;
       I = new blockI();
       I.setup(r,c);
     }
-    else if (Math.random()*7 < 2) {
+    else if (rand < 2) {
       blockJ J;
       J = new blockJ();
       J.setup(r,c);
     }
-    else if (Math.random()*7 < 3) {
+    else if (rand < 3) {
       blockL L;
       L = new blockL();
       L.setup(r,c);
     }
-    else if (Math.random()*7 < 4) {
+    else if (rand < 4) {
       blockO O;
       O = new blockO();
       O.setup(r,c);
     }
-    else if (Math.random()*7 < 5) {
+    else if (rand < 5) {
       blockS S;
       S = new blockS();
       S.setup(r,c);
     }
-    else if (Math.random()*7 < 6) {
+    else if (rand < 6) {
       blockT T;
       T = new blockT();
       T.setup(r,c);
