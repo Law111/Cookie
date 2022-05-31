@@ -9,7 +9,7 @@ class block{
     cInit=c1;
     r=r1;
     c=c1;
-    if (Math.random()*7 < 1) {
+    if (Math.random()*1 < 1) {
       blockI I;
       I = new blockI();
       I.setup(r,c);

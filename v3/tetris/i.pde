@@ -1,3 +1,0 @@
-class i extends block{
-  
-}
