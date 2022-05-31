@@ -1,5 +1,5 @@
-int x = 5;
-  int y = 5;
+int x = 2;
+  int y = 6;
   public board n;
   block b;
   int timer;
