@@ -8,6 +8,6 @@
 
 #### HOW TO LAUNCH
 - clone repo
-- javac *.java
-- java tetris
+- cd tetris
+- processing tetris
 
