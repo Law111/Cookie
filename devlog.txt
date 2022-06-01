@@ -80,3 +80,9 @@ Lawrence Joa :: Added timer
 Justin Mohabir :: Added row removal when rows are full
 Lior Polischouk :: Added spawning blocks when the block reaches the bottom 
 ==============================================================
+2022-05-27
+--------------------------------------------------------------
+Lawrence Joa :: Added flowchart
+Justin Mohabir :: Added block classes
+Lior Polischouk :: Added blockPieces 
+==============================================================
