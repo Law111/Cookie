@@ -78,8 +78,10 @@ class block{
    } else {
      for (int i = 0; i < bArray.length; i++){
        n.board[bArray[i].getR()][bArray[i].getC()] = 1;
-       if(n.rowFull(bArray[i].getR())){
-         n.removeRow(bArray[i].getR());
+     }
+     for (int i = 0; i < bArray.length; i++){
+       if(n.rowFull(bArray[0].getR())){
+         n.removeRow(bArray[0].getR());
        }
      }
      ascend();
