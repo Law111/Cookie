@@ -3,6 +3,8 @@ class block{
  int cInit;
  blockPiece[] bArray;
  char identity;
+ int case;
+ 
  void setup(int r, int c){
    rInit=r;
    cInit=c;
@@ -79,17 +81,23 @@ class block{
      for (int i = 0; i < bArray.length; i++){
        n.board[bArray[i].getR()][bArray[i].getC()] = 1;
      }
-     for (int i = 0; i < bArray.length; i++){
-       if(n.rowFull(bArray[0].getR())){
-         n.removeRow(bArray[0].getR());
+     for (int i = bArray.length-1; i >=0; i--){
+       if(n.rowFull(bArray[i].getR())){
+         n.removeRow(bArray[i].getR());
        }
      }
      ascend();
    }
  }
  
+ void rotateLeft(){
+   
+   if(case=1){
+   }
+ }
+ 
  void ascend(){
-   b = new blockJ();
+   b = new block();
    b.setup(rInit,cInit);
  }
 }
