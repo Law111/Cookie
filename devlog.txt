@@ -80,9 +80,15 @@ Lawrence Joa :: Added timer
 Justin Mohabir :: Added row removal when rows are full
 Lior Polischouk :: Added spawning blocks when the block reaches the bottom 
 ==============================================================
-2022-05-27
+2022-05-30
 --------------------------------------------------------------
 Lawrence Joa :: Added flowchart
 Justin Mohabir :: Added block classes
 Lior Polischouk :: Added blockPieces 
 ==============================================================
+2022-06-01
+--------------------------------------------------------------
+Lawrence Joa :: Added the identification for blocks, so that we can differentiate blocks from the floor
+Justin Mohabir :: Added a sort to make sure that the leftmost blocks will always go left first, which will prevent the blocks from overriding themselves
+Lior Polischouk :: 
+/==============================================================
