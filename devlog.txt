@@ -91,4 +91,10 @@ Lior Polischouk :: Added blockPieces
 Lawrence Joa :: Added the identification for blocks, so that we can differentiate blocks from the floor
 Justin Mohabir :: Added a sort to make sure that the leftmost blocks will always go left first, and allowed multiple rows to be cleared at once
 Lior Polischouk :: 
+==============================================================
+2022-06-02
+--------------------------------------------------------------
+Lawrence Joa :: Altered movement, started implementing rotate
+Justin Mohabir :: 
+Lior Polischouk :: 
 /==============================================================
