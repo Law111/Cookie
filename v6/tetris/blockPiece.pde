@@ -80,6 +80,21 @@ class blockPiece{
       }
     }
   }
+  
+  void clear(){
+    n.board[r][c]=0;
+  }
+  
+  void move(int r1, int c1){
+    n.board[r+r1][c+c1] = 2;
+        r += r1;
+    c += c1;
+  }
+  
+  boolean canMove(int r1, int c1){
+    return n.board[r+r1][c+c1] == 0;
+  }
+  
   int getR(){
     return r;
   }

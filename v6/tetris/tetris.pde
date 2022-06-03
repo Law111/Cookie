@@ -44,6 +44,9 @@
   }
   
   void keyPressed() {
+    if(key == 'z'){
+      b.rotateLeft();
+    }
     if (key == CODED) {
       } if (keyCode == DOWN) {
         b.moveDown();
