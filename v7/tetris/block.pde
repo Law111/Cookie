@@ -170,7 +170,7 @@ class block{
  }
  
  void ascend(){
-   b = new block();
+   b = new blockJ();
    b.setup(rInit,cInit);
  }
 }
