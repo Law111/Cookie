@@ -56,6 +56,6 @@
       } else if (keyCode == RIGHT) {
         b.moveRight();
       }
-  }
+  } 
 
  
