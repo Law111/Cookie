@@ -19,7 +19,7 @@ class block{
    bArray[3].setup(r+3,c);
    identity = 'i';
  }
- void moveRight(){
+ void moveRight(){ 
    if(bArray[0].canMoveRight() && bArray[1].canMoveRight() && bArray[2].canMoveRight() && bArray[3].canMoveRight()){
      // commence the bubble sort because its simple (only a couple comparisons to modify)
      // Essentially we need to make sure the rightmost blockPiece moves first so we sort by column, the first element has the lowest column number

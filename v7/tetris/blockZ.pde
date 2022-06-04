@@ -47,7 +47,7 @@ class blockZ extends block{
         bArray[1].setup(-1+r1,-1+c1);
         bArray[2].setup(0+r2,0+c2);
         bArray[3].setup(-1+r3,1+c3);
-        cases++;
+        cases++; 
      }
    } else if(cases==3){ // J rotated 270 cc
      if(bArray[0].canMove(2,0) && bArray[1].canMove(1,-1) && bArray[2].canMove(0,0) && bArray[3].canMove(-1,-1)){
