@@ -116,7 +116,7 @@ class block{
      }
      // clear the queue on the board
      for(int i=2; i<n.getR()+6; i++){
-      for(int j=n.getC()+2; j<n.getC()+10; j++){
+      for(int j=n.getC()+4; j<n.getC()+10; j++){
         n.board[i][j] = 0;
       }
      }
