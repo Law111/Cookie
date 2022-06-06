@@ -98,3 +98,9 @@ Lawrence Joa :: Altered movement, started implementing rotate
 Justin Mohabir :: 
 Lior Polischouk :: 
 /==============================================================
+2022-06-06
+--------------------------------------------------------------
+Lawrence Joa :: Implementented the rotate
+Justin Mohabir :: Added the queue of blocks
+Lior Polischouk :: Added text
+/==============================================================
