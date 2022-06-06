@@ -41,7 +41,7 @@ class blockZ extends block{
        bArray[3].setup(1+r3,1+c3);
        cases++;
      }
-   } else if(cases==2){ // J rotated 180 cc
+   } else if(cases==2){ // Z rotated 180 cc
      if(bArray[0].canMove(0,-2) && bArray[1].canMove(-1,-1) && bArray[2].canMove(0,0) && bArray[3].canMove(-1,1)){
         bArray[0].setup(0+r0,-2+c0);
         bArray[1].setup(-1+r1,-1+c1);
@@ -49,7 +49,7 @@ class blockZ extends block{
         bArray[3].setup(-1+r3,1+c3);
         cases++; 
      }
-   } else if(cases==3){ // J rotated 270 cc
+   } else if(cases==3){ // Z rotated 270 cc
      if(bArray[0].canMove(2,0) && bArray[1].canMove(1,-1) && bArray[2].canMove(0,0) && bArray[3].canMove(-1,-1)){
         bArray[0].setup(2+r0,0+c0);
         bArray[1].setup(1+r1,-1+c1);
@@ -57,7 +57,7 @@ class blockZ extends block{
         bArray[3].setup(-1+r3,-1+c3);
         cases++;
      }
-   } else if(cases==4){ // J rotated 360 cc
+   } else if(cases==4){ // Z rotated 360 cc
      if(bArray[0].canMove(0,2) && bArray[1].canMove(1,1) && bArray[2].canMove(0,0) && bArray[3].canMove(1,-1)){
         bArray[0].setup(0+r0,2+c0);
         bArray[1].setup(1+r1,1+c1);
