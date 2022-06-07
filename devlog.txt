@@ -104,3 +104,10 @@ Lawrence Joa :: Implementented the rotate
 Justin Mohabir :: Added the queue of blocks
 Lior Polischouk :: Added text
 /==============================================================
+2022-06-07
+--------------------------------------------------------------
+Lawrence Joa :: Added colors
+Justin Mohabir :: Added colors
+Lior Polischouk :: Added colors
+/==============================================================
+

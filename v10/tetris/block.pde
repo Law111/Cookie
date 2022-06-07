@@ -2,23 +2,22 @@ class block{
  int rInit;
  int cInit;
  blockPiece[] bArray;
- char identity;
+ int colorId;
  int cases = 1;
  
  void setup(int r, int c){
-   identity = 'i';
+   colorId=3;
    rInit=r;
    cInit=c;
    bArray = new blockPiece[4];
-   fill(0, 255, 255);
    bArray[0] = new blockPiece();
-   bArray[0].setup(r,c,identity);
+   bArray[0].setup(r,c,colorId);
    bArray[1] = new blockPiece();
-   bArray[1].setup(r+1,c,identity);
+   bArray[1].setup(r+1,c,colorId);
    bArray[2] = new blockPiece();
-   bArray[2].setup(r+2,c,identity);
+   bArray[2].setup(r+2,c,colorId);
    bArray[3] = new blockPiece();
-   bArray[3].setup(r+3,c,identity);
+   bArray[3].setup(r+3,c,colorId);
  }
  void moveRight(){ 
    if(bArray[0].canMoveRight() && bArray[1].canMoveRight() && bArray[2].canMoveRight() && bArray[3].canMoveRight()){
@@ -103,8 +102,9 @@ class block{
      bArray[2].move(1,0);
      bArray[3].move(1,0);
    } else {
+     // We must differentiate the placed blocks from the not placed blocks
      for (int i = 0; i < bArray.length; i++){
-       n.board[bArray[i].getR()][bArray[i].getC()] = 1;
+       n.board[bArray[i].getR()][bArray[i].getC()] = -colorId;
      }
      for (int i = 0; i <7; i++){
        if(bArray[0].getR()-3+i>=22 || bArray[0].getR()-3+i<=1){
@@ -146,34 +146,34 @@ class block{
 
    if(cases==1){ // left vertical to lower horizontal
      if(bArray[0].canMove(2,-1) && bArray[1].canMove(1,0) && bArray[2].canMove(0,1) && bArray[3].canMove(-1,2)){
-       bArray[0].setup(2+r0,-1+c0,identity);
-       bArray[1].setup(1+r1,0+c1,identity);
-       bArray[2].setup(0+r2,1+c2,identity);
-       bArray[3].setup(-1+r3,2+c3,identity);
+       bArray[0].setup(2+r0,-1+c0,colorId);
+       bArray[1].setup(1+r1,0+c1,colorId);
+       bArray[2].setup(0+r2,1+c2,colorId);
+       bArray[3].setup(-1+r3,2+c3,colorId);
        cases++;
      }
    } else if(cases==2){ // lower horizontal to right vertical
      if(bArray[0].canMove(1,2) && bArray[1].canMove(0,1) && bArray[2].canMove(-1,0) && bArray[3].canMove(-2,-1)){
-        bArray[0].setup(1+r0,2+c0,identity);
-        bArray[1].setup(0+r1,1+c1,identity);
-        bArray[2].setup(-1+r2,0+c2,identity);
-        bArray[3].setup(-2+r3,-1+c3,identity);
+        bArray[0].setup(1+r0,2+c0,colorId);
+        bArray[1].setup(0+r1,1+c1,colorId);
+        bArray[2].setup(-1+r2,0+c2,colorId);
+        bArray[3].setup(-2+r3,-1+c3,colorId);
         cases++;
      }
    } else if(cases==3){ // right vertical to upper horizontal
      if(bArray[0].canMove(-2,1) && bArray[1].canMove(-1,0) && bArray[2].canMove(0,-1) && bArray[3].canMove(1,-2)){
-        bArray[0].setup(-2+r0,1+c0,identity);
-        bArray[1].setup(-1+r1,0+c1,identity);
-        bArray[2].setup(0+r2,-1+c2,identity);
-        bArray[3].setup(1+r3,-2+c3,identity);
+        bArray[0].setup(-2+r0,1+c0,colorId);
+        bArray[1].setup(-1+r1,0+c1,colorId);
+        bArray[2].setup(0+r2,-1+c2,colorId);
+        bArray[3].setup(1+r3,-2+c3,colorId);
         cases++;
      }
    } else if(cases==4){ // upper horizontal to left vertical
      if(bArray[0].canMove(-1,-2) && bArray[1].canMove(0,-1) && bArray[2].canMove(1,0) && bArray[3].canMove(2,1)){
-        bArray[0].setup(-1+r0,-2+c0,identity);
-        bArray[1].setup(0+r1,-1+c1,identity);
-        bArray[2].setup(1+r2,0+c2,identity);
-        bArray[3].setup(2+r3,1+c3,identity);
+        bArray[0].setup(-1+r0,-2+c0,colorId);
+        bArray[1].setup(0+r1,-1+c1,colorId);
+        bArray[2].setup(1+r2,0+c2,colorId);
+        bArray[3].setup(2+r3,1+c3,colorId);
         cases=1;
      }
    }

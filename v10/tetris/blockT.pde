@@ -1,18 +1,17 @@
 class blockT extends block{
   void setup(int r, int c){
+    colorId=8;
     rInit=r;
     cInit=c;
     bArray = new blockPiece[4];
-    fill(128, 0, 128);
     bArray[0] = new blockPiece();
-    bArray[0].setup(r,c+1,identity);
+    bArray[0].setup(r,c+1,colorId);
     bArray[1] = new blockPiece();
-    bArray[1].setup(r,c,identity);
+    bArray[1].setup(r,c,colorId);
     bArray[2] = new blockPiece();
-    bArray[2].setup(r+1,c,identity);
+    bArray[2].setup(r+1,c,colorId);
     bArray[3] = new blockPiece();
-    bArray[3].setup(r,c-1,identity);
-    identity = 't';
+    bArray[3].setup(r,c-1,colorId);
   }
     void rotateLeft(){
    int row = 0 , col = 0;
@@ -36,34 +35,34 @@ class blockT extends block{
 
    if(cases==1){ // T rotated 90 cc
      if(bArray[0].canMove(-1,-1) && bArray[1].canMove(0,0) && bArray[2].canMove(-1,1) && bArray[3].canMove(1,1)){
-       bArray[0].setup(-1+r0,-1+c0,identity);
-       bArray[1].setup(0+r1,0+c1,identity);
-       bArray[2].setup(-1+r2,1+c2,identity);
-       bArray[3].setup(1+r3,1+c3,identity);
+       bArray[0].setup(-1+r0,-1+c0,colorId);
+       bArray[1].setup(0+r1,0+c1,colorId);
+       bArray[2].setup(-1+r2,1+c2,colorId);
+       bArray[3].setup(1+r3,1+c3,colorId);
        cases++;
      }
    } else if(cases==2){ // T rotated 180 cc
      if(bArray[0].canMove(1,-1) && bArray[1].canMove(0,0) && bArray[2].canMove(-1,-1) && bArray[3].canMove(-1,1)){
-        bArray[0].setup(1+r0,-1+c0,identity);
-        bArray[1].setup(0+r1,0+c1,identity);
-        bArray[2].setup(-1+r2,-1+c2,identity);
-        bArray[3].setup(-1+r3,1+c3,identity);
+        bArray[0].setup(1+r0,-1+c0,colorId);
+        bArray[1].setup(0+r1,0+c1,colorId);
+        bArray[2].setup(-1+r2,-1+c2,colorId);
+        bArray[3].setup(-1+r3,1+c3,colorId);
         cases++;
      }
    } else if(cases==3){ // T rotated 270 cc
      if(bArray[0].canMove(1,1) && bArray[1].canMove(0,0) && bArray[2].canMove(1,-1) && bArray[3].canMove(-1,-1)){
-        bArray[0].setup(1+r0,1+c0,identity);
-        bArray[1].setup(0+r1,0+c1,identity);
-        bArray[2].setup(1+r2,-1+c2,identity);
-        bArray[3].setup(-1+r3,-1+c3,identity);
+        bArray[0].setup(1+r0,1+c0,colorId);
+        bArray[1].setup(0+r1,0+c1,colorId);
+        bArray[2].setup(1+r2,-1+c2,colorId);
+        bArray[3].setup(-1+r3,-1+c3,colorId);
         cases++;
      }
    } else if(cases==4){ // T rotated 360 cc
      if(bArray[0].canMove(-1,1) && bArray[1].canMove(0,0) && bArray[2].canMove(1,1) && bArray[3].canMove(1,-1)){
-        bArray[0].setup(-1+r0,1+c0,identity);
-        bArray[1].setup(0+r1,0+c1,identity);
-        bArray[2].setup(1+r2,1+c2,identity);
-        bArray[3].setup(1+r3,-1+c3,identity);
+        bArray[0].setup(-1+r0,1+c0,colorId);
+        bArray[1].setup(0+r1,0+c1,colorId);
+        bArray[2].setup(1+r2,1+c2,colorId);
+        bArray[3].setup(1+r3,-1+c3,colorId);
         cases=1;
      }
    }

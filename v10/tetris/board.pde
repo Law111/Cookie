@@ -28,35 +28,42 @@ class board{
         else if(board[i][j] == 2 ){
           square(30*(j-2),30*(i-2),30);
         }
-        else if(board[i][j] == 2 ){
+        else if(board[i][j] == 3 || board[i][j] == -3){
+          fill(0, 255, 255);
           square(30*(j-2),30*(i-2),30);
         }
-        else if(board[i][j] == 2 ){
+        else if(board[i][j] == 4 || board[i][j] == -4){
+          fill(0, 0, 255);
           square(30*(j-2),30*(i-2),30);
         }
-        else if(board[i][j] == 2 ){
+        else if(board[i][j] == 5 || board[i][j] == -5){
+          fill(255, 127, 0);
           square(30*(j-2),30*(i-2),30);
         }
-        else if(board[i][j] == 2 ){
+        else if(board[i][j] == 6 || board[i][j] == -6){
+          fill(255, 255, 0);
           square(30*(j-2),30*(i-2),30);
         }
-        else if(board[i][j] == 2 ){
+        else if(board[i][j] == 7 || board[i][j] == -7){
+          fill(0, 255, 0);
           square(30*(j-2),30*(i-2),30);
         }
-        else if(board[i][j] == 2 ){
+        else if(board[i][j] == 8 || board[i][j] == -8){
+          fill(128, 0, 128);
           square(30*(j-2),30*(i-2),30);
         }
-        else if(board[i][j] == 2 ){
+        else if(board[i][j] == 9 || board[i][j] == -9){
+          fill(255, 0, 0);
           square(30*(j-2),30*(i-2),30);
         }
       }
     }
   }
-  
+  // modified so that it will work with different ints
   boolean rowFull(int row){
     //all the rows will have the same c coordinate
     for(int c1=2; c1<c+2; c1++){
-      if (board[row][c1]!=1){
+      if (board[row][c1]>=-2){
         return false;
       }
     }

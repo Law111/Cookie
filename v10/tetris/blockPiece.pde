@@ -3,38 +3,17 @@ class blockPiece{
   int c;
   int rInit;
   int cInit;
-  String blockLetter = "";
   char identity;
   int colorId;
-  void setup(int r1, int c1, char id){
+  void setup(int r1, int c1, int id){
     rInit=r1;
     cInit=c1;
     r=r1;
     c=c1;
-    identity = id;
-    if(n.board[r1][c1]==1){
+    colorId = id;
+    // modified so that it will work with different ints
+    if(n.board[r1][c1]<=-2){
       gameOver = true;
-    }
-    if (identity == 'i') {
-     colorId=3;
-    }
-    else if (identity == 'j') {
-      colorId=4;
-    }
-    else if (identity == 'l') {
-      colorId=5;
-    }
-    else if (identity == 'o') {
-      colorId=6;
-    }
-    else if (identity == 's') {
-      colorId=7;
-    }
-    else if (identity == 't') {
-      colorId=8;
-    }
-    else {
-      colorId=9;
     }
     n.board[r][c]=colorId;
   }
