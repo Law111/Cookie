@@ -1,7 +1,7 @@
   import java.util.LinkedList;
   import java.util.Queue;
   int x = 2;
-  int y = 6;
+  int y = 7;
   public board n;
   public block b;
   public Queue<String> bbQueue;

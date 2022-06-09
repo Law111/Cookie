@@ -225,20 +225,20 @@ class block{
      } else {
       t3++;
      }
-     if(t2==1){
+     if(t3==1){
          col=2;
          rotateLeft();
      }
-     if(t2==2){
-         col=-2;
+     if(t3==2){
+         col=-1;
          rotateLeft();
      }
-     //if(t2==3){
-     //    col=2;
-     //    row=-1;
-     //    rotateLeft();
-     //}
-     if(t2==4){
+     if(t3==3){
+         col=2;
+         row=-1;
+         rotateLeft();
+     }
+     if(t3==4){
          col=-1;
          row=2;
          rotateLeft();
@@ -257,20 +257,20 @@ class block{
      } else {
       t3++;
      }
-     if(t2==1){
+     if(t4==1){
          col=-1;
          rotateLeft();
      }
-     else if(t2==2){
+     else if(t4==2){
          col=2;
          rotateLeft();
      }
-     else if(t2==3){
+     else if(t4==3){
          col=-1;
          row=-2;
          rotateLeft();
      }
-     else if(t2==4){
+     else if(t4==4){
          col=2;
          row=1;
          rotateLeft();
