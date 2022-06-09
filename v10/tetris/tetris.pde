@@ -7,9 +7,13 @@
   public Queue<String> bbQueue;
   int timer;
   public boolean gameOver;
+  public int score;
+  public int totalLinesCleared;
+  public int level;
 
   void setup() {
     gameOver=false;
+    level=0;
     size(501, 601);
     n = new board();
     b = new block();
@@ -45,7 +49,11 @@
       timer++;
       // Lets add lior
       textSize(25);
-      text("Lior's bbQueue",330,100);
+      fill(255,255,255);
+      text("Score: " + score,330,25);
+      text("Level: " + level,330,55);
+      text("Lines: " + totalLinesCleared,330,85);
+      text("Lior's bbQueue",330,115);
       
       // add the queue 
       block temp;
@@ -75,11 +83,16 @@
       }
       
     } else {
+      fill((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
       text("Lior",150,300);
     }
   }
   void autoFall(){
-    if(timer >= 60) {
+    if(totalLinesCleared/10 != level ){
+      level++;
+    }
+    // speed doubles every level
+    if(timer >= 60*Math.pow(0.5,level)) {
       b.moveDown();
       timer = 0;
     }
