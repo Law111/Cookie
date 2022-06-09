@@ -150,46 +150,133 @@ class block{
    //bArray[2] = new blockPiece();
    //bArray[3] = new blockPiece();
 
-   if(cases==1){ // left vertical to lower horizontal
+   if(cases==1){ // left vertical to lower horizontal 3>>2
      if(bArray[0].canMove(2+row,-1+col) && bArray[1].canMove(1+row,0+col) && bArray[2].canMove(0+row,1+col) && bArray[3].canMove(-1+row,2+col)){
        bArray[0].setup(2+r0+row,-1+c0+col,colorId);
        bArray[1].setup(1+r1+row,0+c1+col,colorId);
        bArray[2].setup(0+r2+row,1+c2+col,colorId);
        bArray[3].setup(-1+r3+row,2+c3+col,colorId);
        cases++;
+       t1=0;
      } else {
-       t1++;
-       if(t1==1){
-         col++;
-         rotateLeft();
-       }
+      t1++;
      }
+     if(t1==1){
+         col=-2;
+         rotateLeft();
+     }
+     if(t1==2){
+         col=1;
+         rotateLeft();
+     }
+     if(t1==3){
+         col=-2;
+         row=1;
+         rotateLeft();
+     }
+     if(t1==4){
+         col=1;
+         row=-2;
+         rotateLeft();
+     }
+     row=0;
+     col=0;
      
-   } else if(cases==2){ // lower horizontal to right vertical
+   } else if(cases==2){ // lower horizontal to right vertical 2>>1
      if(bArray[0].canMove(1+row,2+col) && bArray[1].canMove(0+row,1+col) && bArray[2].canMove(-1+row,0+col) && bArray[3].canMove(-2+row,-1+col)){
         bArray[0].setup(1+r0+row,2+c0+col,colorId);
         bArray[1].setup(0+r1+row,1+c1+col,colorId);
         bArray[2].setup(-1+r2+row,0+c2+col,colorId);
         bArray[3].setup(-2+r3+row,-1+c3+col,colorId);
         cases++;
+        t2=0;
+     } else {
+      t2++;
      }
-   } else if(cases==3){ // right vertical to upper horizontal
+     if(t2==1){
+         col=1;
+         rotateLeft();
+     }
+     if(t2==2){
+         col=-2;
+         rotateLeft();
+     }
+     if(t2==3){
+         col=1;
+         row=2;
+         rotateLeft();
+     }
+     if(t2==4){
+         col=-2;
+         row=-1;
+         rotateLeft();
+     }
+     row=0;
+     col=0;
+   } 
+   else if(cases==3){ // right vertical to upper horizontal 1>>0
      if(bArray[0].canMove(-2+row,1+col) && bArray[1].canMove(-1+row,0+col) && bArray[2].canMove(0+row,-1+col) && bArray[3].canMove(1+row,-2+col)){
         bArray[0].setup(-2+r0+row,1+c0+col,colorId);
         bArray[1].setup(-1+r1+row,0+c1+col,colorId);
         bArray[2].setup(0+r2+row,-1+c2+col,colorId);
         bArray[3].setup(1+r3+row,-2+c3+col,colorId);
         cases++;
+        t3=0;
+     } else {
+      t3++;
      }
-   } else if(cases==4){ // upper horizontal to left vertical
+     if(t2==1){
+         col=2;
+         rotateLeft();
+     }
+     if(t2==2){
+         col=-2;
+         rotateLeft();
+     }
+     //if(t2==3){
+     //    col=2;
+     //    row=-1;
+     //    rotateLeft();
+     //}
+     if(t2==4){
+         col=-1;
+         row=2;
+         rotateLeft();
+     }
+     row=0;
+     col=0;
+   } 
+   else if(cases==4){ // upper horizontal to left vertical 0>>3
      if(bArray[0].canMove(-1+row,-2+col) && bArray[1].canMove(0+row,-1+col) && bArray[2].canMove(1+row,0+col) && bArray[3].canMove(2+row,1+col)){
         bArray[0].setup(-1+r0+row,-2+c0+col,colorId);
         bArray[1].setup(0+r1+row,-1+c1+col,colorId);
         bArray[2].setup(1+r2+row,0+c2+col,colorId);
         bArray[3].setup(2+r3+row,1+c3+col,colorId);
         cases=1;
+        t3=0;
+     } else {
+      t3++;
      }
+     if(t2==1){
+         col=-1;
+         rotateLeft();
+     }
+     else if(t2==2){
+         col=2;
+         rotateLeft();
+     }
+     else if(t2==3){
+         col=-1;
+         row=-2;
+         rotateLeft();
+     }
+     else if(t2==4){
+         col=2;
+         row=1;
+         rotateLeft();
+     }
+     row=0;
+     col=0;
    }
  }
- 
 }
