@@ -83,6 +83,7 @@ class block{
  }
    
  void moveDown(){
+   int linesCleared=0;
    if(bArray[0].canMoveDown() && bArray[1].canMoveDown() && bArray[2].canMoveDown() && bArray[3].canMoveDown()){
      // commence the bubble sort because its simple (only a couple comparisons to modify)
      //blockPiece temp;
@@ -113,11 +114,12 @@ class block{
        n.board[bArray[i].getR()][bArray[i].getC()] = -colorId;
      }
      for (int i = 0; i <7; i++){
-       if(bArray[0].getR()-3+i>=22 || bArray[0].getR()-3+i<=1){
+       if(bArray[0].getR()-3+i>=23 || bArray[0].getR()-3+i<=1){
          break;
        }
        if(n.rowFull(bArray[0].getR()-3+i)){
          n.removeRow(bArray[0].getR()-3+i);
+         linesCleared++;
        }
      }
      // clear the queue on the board
@@ -128,6 +130,17 @@ class block{
      }
      bbQueue.add(randomPiece());
      assignB(bbQueue.remove());
+     
+     totalLinesCleared+=linesCleared;
+     if(linesCleared==1){
+       score+=40*(level+1);
+     } else if(linesCleared==2){
+       score+=100*(level+1);
+     } else if(linesCleared==3){
+       score+=300*(level+1);
+     } else if(linesCleared==4){
+       score+=1200*(level+1);
+     } 
    }
  }
  
