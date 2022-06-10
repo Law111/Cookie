@@ -119,9 +119,14 @@ Lawrence Joa :: Added colors
 Justin Mohabir :: Added colors
 Lior Polischouk :: Added colors
 /==============================================================
-2022-06-07
+2022-06-08
 --------------------------------------------------------------
 Lawrence Joa :: Started special cases for rotate
 Justin Mohabir :: Made the score counter
 Lior Polischouk ::
+2022-06-07
+--------------------------------------------------------------
+Lawrence Joa :: Finished rotate
+Justin Mohabir :: Finishing touches
+Lior Polischouk :: Bugfixing
 /==============================================================
