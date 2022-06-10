@@ -28,23 +28,32 @@ Flesh out each category whenever necessary, appropriate.
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow we so BOSS bc...
+- We were able to make each element in the two dimensional board array 
+- We made colors by using different integers 
+- In order to prevent the autoFall from being choppy we used a timer that counts frames instead of a delay 
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
+- rotating against walls is still unreliable
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo!...
+- the fill method on processing changes the color of all objects that come after it 
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
 
+- We changed the blocks to store blockpieces in an array so that we could keep track of them easier 
+- We changed the move method for blocks from sorting the array to deleting the block and spawning a new one to avoid sorting 
+
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Make sure that the code is easily readable and make sure that we all know what the stray numbers represent
+- Try to make methods as general as possible so they will work for all subclasses 
 tales of wisdom gained...
 ||||||||||||||||||||||||||||||||||||||||||
 
